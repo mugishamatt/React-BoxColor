@@ -19,9 +19,8 @@ class ToggleCount extends React. Component {
     render(){
       const isToggleOn= this.state.isToggle
       return(
-          <div className='column' >
-              {/* style={isOn?"blue":"red"}  */}
-              {/* <div className={isToggleOn ? 'yellow': 'red'}> */}
+          <div className='box' >
+          
                 <div>
                <button className= {isToggleOn ? 'blue': 'yellow'} onClick ={this.handleCount}>
                {this.state.count} 
