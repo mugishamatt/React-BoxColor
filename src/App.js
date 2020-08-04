@@ -20,14 +20,19 @@ class ToggleCount extends React.Component {
     );
   }
   render() { 
-    return (  
-      <div>
-            <button onClick ={this.handleCount}>
-               {this.state.count} 
-                      </button>
-      </div>
-    );
-  }
+    const isToggleOn= this.state.isToggle
+    return(
+        <div className='column' >
+
+              <div>
+             <button className= {isToggleOn ? 'blue': 'yellow'} onClick ={this.handleCount}>
+             {this.state.count} 
+                    </button>
+                    </div>
+            </div>
+       
+    )
+}
 }
  
 export default ToggleCount;
