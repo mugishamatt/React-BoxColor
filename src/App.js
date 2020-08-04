@@ -7,7 +7,7 @@ class ToggleCount extends React.Component {
     super(props);
     this.state = { 
       count:0,
-      // IsToggle:false
+      IsToggle:false
 
      }
   }
@@ -15,6 +15,7 @@ class ToggleCount extends React.Component {
   handleCount=()=>{
     this.setState({
       count:this.state.count +1,
+      IsToggle:!this.state.IsToggle
     }
     );
   }
