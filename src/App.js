@@ -1,38 +1,35 @@
 import React from 'react';
+import './App.css'
 
-import './App.css';
-//create class Component
-class ToggleCount extends React.Component {
+class ToggleCount extends React. Component {
   constructor(props) {
     super(props);
     this.state = { 
       count:0,
-      IsToggle:false
-
+      isToggle:false
      }
   }
-  //handle event to update when user click buton
   handleCount=()=>{
     this.setState({
       count:this.state.count +1,
-      IsToggle:!this.state.IsToggle
-    }
-    );
+      isToggle:!this.state.isToggle
+    })
   }
-  render() { 
-    const isToggleOn= this.state.isToggle
-    return(
-        <div className='column' >
 
-              <div>
-             <button className= {isToggleOn ? 'blue': 'yellow'} onClick ={this.handleCount}>
-             {this.state.count} 
-                    </button>
-                    </div>
-            </div>
-       
-    )
-}
-}
- 
-export default ToggleCount;
+    render(){
+      const isToggleOn= this.state.isToggle
+      return(
+          <div className='column' >
+              {/* style={isOn?"blue":"red"}  */}
+              {/* <div className={isToggleOn ? 'yellow': 'red'}> */}
+                <div>
+               <button className= {isToggleOn ? 'blue': 'yellow'} onClick ={this.handleCount}>
+               {this.state.count} 
+                      </button>
+                      </div>
+              </div>
+         
+      )
+  }
+  }
+  export default ToggleCount;
